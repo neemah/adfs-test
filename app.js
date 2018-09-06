@@ -7,7 +7,7 @@
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
-  , wsfedsaml2 = require('../../lib/passport-wsfed-saml2/index').Strategy
+  , wsfedsaml2 = require('passport-wsfed-saml2').Strategy
   , fs = require('fs')
   , morgan = require('morgan')
   , cookieParser = require('cookie-parser')
