@@ -20,6 +20,8 @@ var users = [
   , { id: 2, givenName: 'foo', email: 'foo@gmail.com' }
 ];
 
+const port = process.env.PORT || 3000;
+
 function findByEmail(email, fn) {
   for (var i = 0, len = users.length; i < len; i++) {
     var user = users[i];
@@ -29,7 +31,6 @@ function findByEmail(email, fn) {
   }
   return fn(null, null);
 }
-
 
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
@@ -129,8 +130,8 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.listen(3000, function () {
-  console.log("Server listening in http://localhost:3000");
+app.listen(port, function () {
+  console.log(`Server listening in http://localhost:${port}`);
 });
 
 // Simple route middleware to ensure user is authenticated.
