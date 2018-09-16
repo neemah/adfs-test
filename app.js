@@ -55,7 +55,7 @@ passport.use(new wsfedsaml2(
     identityProviderUrl: 'https://kaiten.infoworker.ru/adfs/ls',
     // setup either a certificate base64 encoded (cer) or just the thumbprint of the certificate if public key is embedded in the signature
 
-    cert: fs.readFileSync('123123123m')
+    cert: fs.readFileSync(__dirname + '/cert.pem')
     //thumbprints: ['b09e43c2e62d7d9707c58d948ba795e50ef402ab'] //‎b0 9e 43 c2 e6 2d 7d 97 07 c5 8d 94 8b a7 95 e5 0e f4 02 ab
   },
   function(profile, done) {
