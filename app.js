@@ -118,6 +118,11 @@ app.get('/login',
   }
 );
 
+app.post('/login/callback', (req, res, next) => {
+  console.log(req.body);
+  next();
+});
+
 app.post('/login/callback',
   passport.authenticate('wsfed-saml2', { failureRedirect: '/', failureFlash: true }),
   function(req, res) {
