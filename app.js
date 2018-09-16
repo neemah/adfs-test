@@ -51,11 +51,11 @@ passport.use(new wsfedsaml2(
   {
     path: '/login/callback',
     realm: 'urn:node:app',
-    homeRealm: '', // specify an identity provider to avoid showing the idp selector
+    // homeRealm: '', // specify an identity provider to avoid showing the idp selector
     identityProviderUrl: 'https://kaiten.infoworker.ru/adfs/ls',
     // setup either a certificate base64 encoded (cer) or just the thumbprint of the certificate if public key is embedded in the signature
 
-    cert: fs.readFileSync('cert.pem')
+    cert: fs.readFileSync('123123123m')
     //thumbprints: ['b09e43c2e62d7d9707c58d948ba795e50ef402ab'] //‎b0 9e 43 c2 e6 2d 7d 97 07 c5 8d 94 8b a7 95 e5 0e f4 02 ab
   },
   function(profile, done) {
