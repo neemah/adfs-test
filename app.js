@@ -55,8 +55,8 @@ passport.use(new wsfedsaml2(
     identityProviderUrl: 'https://kaiten.infoworker.ru/adfs/ls',
     // setup either a certificate base64 encoded (cer) or just the thumbprint of the certificate if public key is embedded in the signature
 
-    cert: 'MIIC6jCCAdKgAwIBAgIQXGQZppF3m4VBd1y8eOlTmjANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDEyZBREZTIEVuY3J5cHRpb24gLSBrYWl0ZW4uaW5mb3dvcmtlci5ydTAeFw0xODA5MTYxNDExNTVaFw0xOTA5MTYxNDExNTVaMDExLzAtBgNVBAMTJkFERlMgRW5jcnlwdGlvbiAtIGthaXRlbi5pbmZvd29ya2VyLnJ1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3o+Ho7asK/9OirgMqujU9H0vYvmy4Oao93dWMOTZHVpWo8eqhJF7Qsv92pkkxm2IzPMkMuvasOfK6cXgMU8MVqLQgovZd/ci9QFpZKu8KW8e7fX1WpLhT0sG9YUNDYaeddqPg22+fh69Dt/LMR6QM2Vvgs3+UsORaZNOZk0rmAzkGXR6tyDmN6jEVjxN2+pJ6+0M47UHfsq+U+Bo5nV4oyEokVCYj2nxn/rQDbiFSCF590kmVduOtf8FODxxsI21RI6/F3E7pcmT/xfH4272lujxWJRVVZyopQhhWATBeLDBIW8TDWiJQLf/6hqqOX3n6fpuzoYzWxRvHla8OvobgwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCRLzigOwpvMzxEJ8ParAnWrXrZhRh+KjusO1ENGWam03RRzlRcwQL1GwVj0H5Rjm61fqGMr/FpEENR/emtoDVg74RXdibkjp2cOoiilZtzeGWcyteCiSSm/uuR4erSMMcf1w35givASB9lTumS0bRkrs0RU8nFyhSMQ0YfCR/LlVZIcVrCByBcbU/YxNvyKZVibxK3FBCBUxaBvnLiYT2MMfLgmSj268Tja09biaqIhJp0JPkK/WQPbYNWCID6NXgDBd9ok/tf57uDdLWbNlGYY1ovdLN3Vyl0LGgs98BbvxsNCGM0QL/OaeVpgJtLp+dwFtdtcCMRGLug3S5J4dDo'
-    //thumbprints: ['b09e43c2e62d7d9707c58d948ba795e50ef402ab']
+    //cert: ''
+    thumbprints: ['b09e43c2e62d7d9707c58d948ba795e50ef402ab'] //‎b0 9e 43 c2 e6 2d 7d 97 07 c5 8d 94 8b a7 95 e5 0e f4 02 ab
   },
   function(profile, done) {
     console.log("Auth with", profile);
