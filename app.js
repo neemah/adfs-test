@@ -16,8 +16,8 @@ var express = require('express')
   , session = require('express-session');
 
 var users = [
-    { id: 1, givenName: 'matias', email: 'matias@auth10.com' }
-  , { id: 2, givenName: 'foo', email: 'foo@gmail.com' }
+    { id: 1, givenName: 'ivan', email: 'ivanov@kaiten091018.com' }
+  , { id: 2, givenName: 'petr', email: 'petrov@kaiten091018.com' }
 ];
 
 const port = process.env.PORT || 3000;
@@ -52,11 +52,11 @@ passport.use(new wsfedsaml2(
     path: '/login/callback',
     realm: 'urn:node:app',
     homeRealm: '', // specify an identity provider to avoid showing the idp selector
-    identityProviderUrl: 'https://auth10-dev.accesscontrol.windows.net/v2/wsfederation',
+    identityProviderUrl: 'https://kaiten.infoworker.ru/adfs/ls',
     // setup either a certificate base64 encoded (cer) or just the thumbprint of the certificate if public key is embedded in the signature
 
     //cert: 'MIIDFjCCAf6gAwIBAgIQDRRprj9lv5RBvaQdlFltDzANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDEyRhdXRoMTAtZGV2LmFjY2Vzc2NvbnRyb2wud2luZG93cy5uZXQwHhcNMTEwOTIxMDMzMjMyWhcNMTIwOTIwMDkzMjMyWjAvMS0wKwYDVQQDEyRhdXRoMTAtZGV2LmFjY2Vzc2NvbnRyb2wud2luZG93cy5uZXQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCEIAEB/KKT3ehNMy2MQEyJIQ14CnZ8DC2FZgL5Gw3UBSdRb9JinK/gw7yOQtwKfJUqeoZaUSAAdcdbgqwVxOnMBfWiYX7DGlEznSfqYVnjOWjqqjpoe0h6RaOkdWovDtoidmqVV1tWRJFjkj895clPxkLpnqqcycfXtSdZen0SroGyirD2mhMc9ccLbJ3zRnBNjlvpo5zow1zYows09tNC2EhGROL/OS4JNRQnJRICZC+WkA7Igf3xb4btJOzIPYhFiqCGrd/81CHmAyEuNzyc60I5yomDQfZ91Eb5Uk3F7mlfAlYB2aZwDwldLSOlVE8G1E5xFexF/5KyPC4ShNodAgMBAAGjLjAsMAsGA1UdDwQEAwIE8DAdBgNVHQ4EFgQUyYfx/r0czsPgTzitqey+fGMQpkcwDQYJKoZIhvcNAQEFBQADggEBAB5dgQlM3tKS+/cjlvMCPjZH0Iqo/Wxecri3YWi2iVziZ/TQ3dSV+J/iTyduN7rJmFQzTsNERcsgyAwblwnEKXXvlWo8G/+VDIMh3zVPNQFKns5WPkfkhoSVlnZPTQ8zdXAcWgDXbCgvdqIPozdgL+4l0W0XVL1ugA4/hmMXh4TyNd9Qj7MWvlmwVjevpSqN4wG735jAZFHb/L/vvc91uKqP+JvLNj8tPFVxatzi56X1V8jBM61Hx1Z9D0RCDjtmcQVysVEylW9O6mNy6ZrhLm0q5yecWudfBbTKDqRoCHQRjrMU2c5q/ZFDtgjLim7FaNxFbgTyjeRCPclEhfemYVg='
-    thumbprints: ['a3cff17cbf7e793a97861390eb698d00e9598537']
+    thumbprints: ['819bed29a7dc88cb1df14080507fb08e8b4d48bd']
   },
   function(profile, done) {
     console.log("Auth with", profile);
